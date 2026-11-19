@@ -1,0 +1,232 @@
+
+/* 1. Tampilan dasar */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #4f46e5;
+    font-size: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+}
+
+/* 2. Layout utama */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.konten {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 3;
+}
+
+.sidebar {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.konten h2 {
+    margin: 20px 0 12px;
+    font-size: 18px;
+}
+
+/* 3. Tabel */
+.tabel-data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.tabel-data th,
+.tabel-data td {
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabel-data th {
+    background-color: #eef0ff;
+}
+
+/* 4. Sidebar */
+.sidebar ul {
+    padding-left: 20px;
+    line-height: 2;
+}
+
+.sidebar h3 {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.sidebar input[type="text"],
+.form-buku input,
+.form-buku select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+}
+
+.ringkas {
+    margin: 10px 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* 5. Tombol */
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3730a3;
+}
+
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.sidebar button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 6. Form */
+.form-buku {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.form-buku p {
+    flex: 1 1 160px;
+    margin: 0;
+}
+
+.form-buku label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-buku button {
+    align-self: flex-end;
+}
+
+/* 7. Kelas dari JavaScript */
+.tabel-data tbody tr.dipilih {
+    background-color: #e0e7ff;
+}
+
+.tabel-data tbody tr.menipis td:last-child {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* 8. Validasi */
+.form-buku input.salah {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.pesan-error {
+    margin-top: 16px;
+    padding: 12px 32px;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    color: #991b1b;
+    font-size: 14px;
+}
+
+.pesan-sukses {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 6px;
+    color: #065f46;
+    font-size: 14px;
+}
+
+.pesan-error:empty,
+.pesan-sukses:empty {
+    display: none;
+}
+
+/* 9. Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* 10. Tampilan layar kecil */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .konten,
+    .sidebar {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+
+    .tabel-data {
+        font-size: 11px;
+    }
+
+    .tabel-data th,
+    .tabel-data td {
+        padding: 5px;
+    }
+}
